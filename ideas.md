@@ -75,3 +75,11 @@
 - مساحة الكتالوج قبل وصول المنتجات تعرض كـAtelier Preview دافئ ومقصود، لا كـplaceholder تقني.
 - شعار Sophia يقدَّم كعلامة أتيليه: رمز واضح، واسم بخط تحريري، ووسم صغير يرسخ “Gift Atelier · UAE”.
 - خامات الواجهة تضيف إشارات ورقية ومطبوعة وختمية خفيفة، بدون ازدحام أو محاكاة مباشرة لورق ملموس.
+
+## Revision — Modern English-First Storefront
+
+The storefront is now reframed as **Modern Keepsake Commerce**: an English-first, fashion-editorial commerce experience with Arabic as a first-class toggle rather than a translated afterthought. The official Sophia Candles wordmark is the primary brand asset in the header, closing moment, footer and favicon.
+
+The visual language uses warm white, charcoal ink and restrained sage rather than decorative gold-led luxury. Strong Playfair display typography, clean DM Sans UI text, sharp product framing and graphic number systems make the experience feel current. Arabic keeps the same hierarchy and layout while switching direction and using a more graceful display face. The supplied official logo must remain unaltered; it is cropped only through its surrounding container to remove its built-in white margin.
+
+The official wordmark is treated as a primary signature, not a small decorative device: it is legible in the header, closing sequence and footer. Sophia Sage acts as the repeating visual thread across action buttons, numbered cues, seals and selected italic display words. Repeated ribbon arcs, Atelier Preview tabs and small SC seals connect product moments without making the experience decorative.

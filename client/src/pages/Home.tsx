@@ -1,114 +1,184 @@
 /**
- * Sophia Candles — Atelier of Lasting Flowers
- * Warm minimalist editorial luxury: ivory, parchment, matte gold, and Sophia Sage.
- * The site is an asymmetric gifting journey, not a dense product grid.
+ * Sophia Candles — Modern Keepsake Commerce
+ * English-first quiet luxury, graphic type, black-on-ivory contrast, and the official Sophia wordmark.
+ * A clear language toggle changes both the copy and direction without duplicating the storefront.
  */
 import { useState } from "react";
-import {
-  ArrowDownLeft,
-  ArrowUpLeft,
-  ChevronLeft,
-  Menu,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { toast } from "sonner";
 
+const officialLogo = "/manus-storage/sophia-official-logo_aa513219.png";
 const heroImage = "/manus-storage/sophia-hero-bouquet_557ec05c.jpg";
 const atelierImage = "/manus-storage/sophia-atelier-still-life_b579ade2.jpg";
 const personalisationImage = "/manus-storage/sophia-personalisation_56f1a835.jpg";
 const celebrationImage = "/manus-storage/sophia-celebration-table_3ed841c9.jpg";
-const symbolImage = "/manus-storage/sophia-symbol_38ac2f68.png";
 
-const navItems = [
-  { label: "المجموعات", target: "collections" },
-  { label: "هدايا مخصصة", target: "personalised" },
-  { label: "للمناسبات", target: "occasions" },
-];
+type Language = "en" | "ar";
 
-const collections = [
-  {
-    number: "01",
-    title: "بوكيهات الشموع",
-    subtitle: "هدية تشبه الورد، وذكراها أطول.",
-    accent: "from-[#f2ece3] to-[#e1e5dc]",
+const copy = {
+  en: {
+    direction: "ltr",
+    topNote: "HANDCRAFTED · GIFT-READY · UAE",
+    brandMeta: "HANDMADE GIFT ATELIER",
+    nav: [
+      { label: "Collections", target: "collections" },
+      { label: "Personalisation", target: "personalised" },
+      { label: "Occasions", target: "occasions" },
+    ],
+    order: "Start your order",
+    menu: "Menu",
+    close: "Close menu",
+    heroEyebrow: "Hand-poured in the UAE",
+    heroTitle: <>Gifts with a<br /><em>story to keep.</em></>,
+    heroBody: "Sculptural candles, floral bouquets and personal details, made for the moments that matter most.",
+    explore: "Explore the collection",
+    bespoke: "Personalised orders",
+    heroTag: "Sophia Gift Atelier",
+    heroCaption: "Designed to be given. Made to be remembered.",
+    editEyebrow: "The Sophia edit",
+    editTitle: <>Choose a gift<br />that <em>feels personal.</em></>,
+    editBody: "A curated space for your confirmed collections, with every product, image and AED price displayed with clarity.",
+    collections: [
+      { no: "01", title: "Candle bouquets", body: "Flowers in form. A keepsake in spirit.", cue: "HAND-POURED" },
+      { no: "02", title: "Personalised gifting", body: "Names, dates and thoughtful details.", cue: "MADE FOR THEM" },
+      { no: "03", title: "Wedding & event favors", body: "Small gestures with a lasting impression.", cue: "FOR THE TABLE" },
+    ],
+    personalisedEyebrow: "Make it yours",
+    personalisedTitle: <>Made around<br />your <em>moment.</em></>,
+    personalisedBody: "For the person, the occasion and the message you want them to hold on to. We leave room for the details that make a gift feel truly theirs.",
+    personalisedCta: "Talk to us about a custom idea",
+    personalisedCaption: "Every detail starts with your story.",
+    catalogueEyebrow: "Coming into focus",
+    catalogueTitle: <>Your collection,<br /><em>beautifully considered.</em></>,
+    catalogueBody: "Once you share the final product names, images and AED prices, this space becomes your shoppable catalogue — never a generic product grid.",
+    catalogueTop: "ATELIER PREVIEW",
+    catalogueCardLabel: "CURATED FOR GIFTING",
+    catalogueCardTitle: "Your next signature piece",
+    catalogueCardMeta: "Product name · Description · AED price",
+    catalogueFooter: "A considered collection, ready for your final details",
+    occasionEyebrow: "For the occasion",
+    occasionTitle: <>Details your<br />guests <em>remember.</em></>,
+    occasionBody: "An elevated space for wedding favors, welcome gifts and corporate moments — told with a different kind of care.",
+    occasionCta: "Tell us about your occasion",
+    closingEyebrow: "SOPHIA CANDLES · UAE",
+    closingTitle: <>The next gift you give<br />can <em>stay with them.</em></>,
+    closingCta: "Begin your order",
+    closingNote: "WhatsApp ordering will be connected as soon as the customer service number is confirmed.",
+    footerLine: "Handmade gifting, with meaning.",
+    footerCopy: "© 2026 Sophia Candles",
+    toastTitle: "Orders will open here soon.",
+    toastBody: "We will connect this button to Sophia Candles WhatsApp once the number is confirmed.",
   },
-  {
-    number: "02",
-    title: "لمسات باسمهم",
-    subtitle: "تفاصيل مصممة للحظة لا تتكرر.",
-    accent: "from-[#e6e9e2] to-[#d7d4ca]",
+  ar: {
+    direction: "rtl",
+    topNote: "مصنوع يدوياً · جاهز للإهداء · الإمارات",
+    brandMeta: "هدايا مصنوعة بعناية",
+    nav: [
+      { label: "المجموعات", target: "collections" },
+      { label: "التخصيص", target: "personalised" },
+      { label: "المناسبات", target: "occasions" },
+    ],
+    order: "ابدئي طلبك",
+    menu: "القائمة",
+    close: "إغلاق القائمة",
+    heroEyebrow: "مصنوع يدوياً في الإمارات",
+    heroTitle: <>هدية لها<br /><em>حكاية تبقى.</em></>,
+    heroBody: "شموع وبوكيهات بتفاصيل شخصية، مصنوعة للحظات اللي تستحق أن تبقى قريبة.",
+    explore: "اكتشفي المجموعة",
+    bespoke: "طلبات مخصصة",
+    heroTag: "Sophia Gift Atelier",
+    heroCaption: "مصممة لتُهدى. مصنوعة لتُتذكر.",
+    editEyebrow: "اختيارات Sophia",
+    editTitle: <>اختاري هدية<br /><em>تشبههم.</em></>,
+    editBody: "هنا سيكون عرض منتجاتك المعتمدة، مع الصور والأسماء والأسعار بالـAED بشكل واضح وراقي.",
+    collections: [
+      { no: "01", title: "بوكيهات الشموع", body: "شكل ورد، وذكرى تعيش أطول.", cue: "مصبوب يدوياً" },
+      { no: "02", title: "هدايا مخصصة", body: "أسماء وتواريخ وتفاصيل محسوبة.", cue: "لهم وحدهم" },
+      { no: "03", title: "هدايا الزفاف والمناسبات", body: "لفتات صغيرة تترك أثراً كبيراً.", cue: "لضيافتك" },
+    ],
+    personalisedEyebrow: "تفصيلة تخصهم",
+    personalisedTitle: <>مصنوعة على<br /><em>لحظتهم.</em></>,
+    personalisedBody: "للشخص، وللمناسبة، وللكلمة التي تريدين أن تبقى. نترك مساحة للتفاصيل التي تجعل الهدية خاصة بهم وحدهم.",
+    personalisedCta: "احكي لنا عن فكرتك",
+    personalisedCaption: "كل تفصيلة تبدأ من حكايتك.",
+    catalogueEyebrow: "قريباً في كتالوجك",
+    catalogueTitle: <>مجموعتك،<br /><em>مقدمة كما تستحق.</em></>,
+    catalogueBody: "بعد إرسال أسماء المنتجات النهائية وصورها وأسعارها بالـAED، يتحول هذا المكان إلى كتالوجك الحقيقي — مش مجرد شبكة منتجات تقليدية.",
+    catalogueTop: "ATELIER PREVIEW",
+    catalogueCardLabel: "مُختارة للإهداء",
+    catalogueCardTitle: "قطعتك المميزة القادمة",
+    catalogueCardMeta: "اسم المنتج · الوصف · السعر بالـAED",
+    catalogueFooter: "مجموعة مدروسة، جاهزة لتفاصيلك النهائية",
+    occasionEyebrow: "للمناسبة",
+    occasionTitle: <>تفاصيل يتذكرها<br /><em>ضيوفك.</em></>,
+    occasionBody: "مساحة راقية لهدايا الزفاف والاستقبال والشركات — لها نبرة وعناية مختلفة.",
+    occasionCta: "احكي لنا عن مناسبتك",
+    closingEyebrow: "SOPHIA CANDLES · UAE",
+    closingTitle: <>الهدية الجاية<br /><em>تفضل معاهم.</em></>,
+    closingCta: "ابدئي طلبك",
+    closingNote: "سيتم ربط الطلبات بواتساب Sophia Candles عند تأكيد رقم خدمة العملاء.",
+    footerLine: "هدايا مصنوعة بمعنى.",
+    footerCopy: "© 2026 Sophia Candles",
+    toastTitle: "الطلبات هتفتح من هنا قريباً.",
+    toastBody: "هنربط الزر بواتساب Sophia Candles بمجرد تأكيد الرقم.",
   },
-  {
-    number: "03",
-    title: "استقبال وضيافة",
-    subtitle: "هدايا صغيرة تترك أثراً كبيراً.",
-    accent: "from-[#eee7dc] to-[#e2ddd4]",
-  },
-];
+};
 
 function scrollToSection(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function ComingSoonToast() {
-  toast("سنربط هذا الزر بواتساب الطلبات بعد تأكيد الرقم.", {
-    description: "الموقع الآن نسخة عرض، والأسعار والمنتجات ستضاف من بياناتك المعتمدة.",
-  });
+function OfficialLogo({ alt = "Sophia Candles" }: { alt?: string }) {
+  return (
+    <span className="official-logo-wrap">
+      <img className="official-logo" src={officialLogo} alt={alt} />
+    </span>
+  );
 }
 
 export default function Home() {
+  const [language, setLanguage] = useState<Language>("en");
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = copy[language];
 
-  const chooseNav = (target: string) => {
+  const showOrderToast = () => toast(t.toastTitle, { description: t.toastBody });
+  const navigate = (target: string) => {
     setMenuOpen(false);
     scrollToSection(target);
   };
+  const toggleLanguage = () => {
+    setLanguage((current) => (current === "en" ? "ar" : "en"));
+    setMenuOpen(false);
+  };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#fbfaf6] text-[#28312b]" dir="rtl">
+    <div className="sophia-site" dir={t.direction} data-lang={language}>
+      <div className="announcement-bar">{t.topNote}</div>
       <header className="site-header">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 lg:px-10 lg:py-5">
-          <button
-            aria-label="العودة إلى بداية الصفحة"
-            className="brand-lockup group"
-            onClick={() => scrollToSection("top")}
-          >
-            <img src={symbolImage} alt="رمز Sophia Candles" className="brand-symbol" />
-            <span className="brand-name" dir="ltr">
-              Sophia
-              <small>CANDLES</small>
-              <b>GIFT ATELIER · UAE</b>
-            </span>
+        <div className="header-inner">
+          <button className="logo-button" onClick={() => scrollToSection("top")} aria-label="Sophia Candles home">
+            <span className="brand-lockup"><OfficialLogo /><small>{t.brandMeta}</small></span>
           </button>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="التنقل الرئيسي">
-            {navItems.map((item) => (
-              <button className="nav-link" key={item.target} onClick={() => scrollToSection(item.target)}>
-                {item.label}
-              </button>
-            ))}
-            <button className="header-cta" onClick={ComingSoonToast}>
-              اطلبي هدية مميزة <ArrowUpLeft size={15} strokeWidth={1.8} />
-            </button>
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {t.nav.map((item) => <button key={item.target} onClick={() => navigate(item.target)}>{item.label}</button>)}
           </nav>
 
-          <button
-            aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}
-            className="grid h-10 w-10 place-items-center rounded-full border border-[#d9d8cf] lg:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={20} /> : <Menu size={21} />}
-          </button>
+          <div className="header-actions">
+            <button className="language-switch" onClick={toggleLanguage} aria-label="Switch website language">
+              <span className={language === "en" ? "active" : ""}>EN</span><i />
+              <span className={language === "ar" ? "active" : ""}>ع</span>
+            </button>
+            <button className="order-button desktop-order" onClick={showOrderToast}>{t.order}<ArrowUpRight size={15} /></button>
+            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? t.close : t.menu}>
+              {menuOpen ? <X size={20} /> : <Menu size={21} />}
+            </button>
+          </div>
         </div>
         {menuOpen && (
-          <nav className="mobile-nav lg:hidden" aria-label="التنقل عبر الهاتف">
-            {navItems.map((item) => (
-              <button key={item.target} onClick={() => chooseNav(item.target)}>
-                {item.label} <ChevronLeft size={17} />
-              </button>
-            ))}
-            <button onClick={ComingSoonToast}>ابدئي طلبك <ArrowUpLeft size={17} /></button>
+          <nav className="mobile-menu" aria-label="Mobile navigation">
+            {t.nav.map((item) => <button key={item.target} onClick={() => navigate(item.target)}>{item.label}<ArrowUpRight size={16} /></button>)}
+            <button onClick={showOrderToast}>{t.order}<ArrowUpRight size={16} /></button>
           </nav>
         )}
       </header>
@@ -116,149 +186,89 @@ export default function Home() {
       <main id="top">
         <section className="hero-section" aria-labelledby="hero-heading">
           <div className="hero-copy">
-            <div className="eyebrow"><span /> مصنوع يدوياً في الإمارات</div>
-            <p className="hero-kicker">لأن الهدية الحلوة تبدأ بتفصيلٍ واحد.</p>
-            <h1 id="hero-heading">هدية شكلها ورد،<br /><em>وذكراها أطول.</em></h1>
-            <p className="hero-intro">
-              شموع وبوكيهات مصنوعة بعناية، لتصير كل مناسبة أكثر قرباً ودفئاً.
-            </p>
+            <p className="eyebrow"><span />{t.heroEyebrow}</p>
+            <h1 id="hero-heading">{t.heroTitle}</h1>
+            <p className="hero-description">{t.heroBody}</p>
             <div className="hero-actions">
-              <button className="button-primary" onClick={() => scrollToSection("collections")}>
-                اكتشفي المجموعات <ArrowDownLeft size={17} />
-              </button>
-              <button className="button-quiet" onClick={() => scrollToSection("personalised")}>
-                للطلبات المخصصة <span>↙</span>
-              </button>
-            </div>
-            <div className="hero-note">
-              <div className="wax-seal">SC</div>
-              <span>مُغلفة كأنها جزء من الهدية.</span>
+              <button className="order-button" onClick={() => scrollToSection("collections")}>{t.explore}<ArrowDownRight size={16} /></button>
+              <button className="text-button" onClick={() => scrollToSection("personalised")}>{t.bespoke}<ArrowUpRight size={16} /></button>
             </div>
           </div>
-
-          <div className="hero-visual" aria-label="تصور لبوكيه شموع فاخر">
-            <div className="hero-photo-wrap">
-              <img src={heroImage} alt="بوكيه شموع وردي فاخر بألوان عاجية" />
-            </div>
-            <div className="hero-badge"><span>01</span> Sophia Gift Atelier</div>
-            <div className="ribbon-line" aria-hidden="true" />
+          <div className="hero-art">
+            <div className="hero-index">01 <span> / THE GIFT EDIT</span></div>
+            <img src={heroImage} alt="Sophia Candles candle bouquet gift arrangement" />
+            <div className="hero-sticker"><span>SC</span><p>{t.heroTag}</p></div>
+            <p className="hero-caption">{t.heroCaption}</p>
+            <div className="ribbon-mark hero-ribbon" aria-hidden="true" />
           </div>
         </section>
 
-        <section className="intro-strip" aria-label="قيم Sophia Candles">
-          <div className="intro-number">01</div>
-          <p>ليست مجرد شمعة. هي لحظة تختارينها لشخصٍ مهم.</p>
-          <div className="intro-details">
-            <span>Hand-poured</span><i /> <span>Gift-ready</span><i /> <span>Made to remember</span>
+        <section id="collections" className="collections-section section-anchor" aria-labelledby="collection-heading">
+          <div className="section-topline"><span>01 — 03</span><span className="section-seal">SC</span><span>{t.editEyebrow}</span></div>
+          <div className="collection-intro">
+            <div><p className="eyebrow"><span />{t.editEyebrow}</p><h2 id="collection-heading">{t.editTitle}</h2></div>
+            <p>{t.editBody}</p>
           </div>
-        </section>
-
-        <section id="collections" className="collections-section section-anchor" aria-labelledby="collections-heading">
-          <div className="section-heading-wrap">
-            <div>
-              <div className="eyebrow"><span /> مجموعة Sophia</div>
-              <h2 id="collections-heading">كل هدية تبدأ<br />بـ <em>حكاية.</em></h2>
-            </div>
-            <p className="section-side-copy">هذا هو مكان كتالوجك القادم: صور أصلية، منتجات مؤكدة، وأسعار واضحة فقط بعد ما تبعتيها.</p>
-          </div>
-
           <div className="collection-list">
-            {collections.map((collection) => (
-              <article className="collection-row" key={collection.number}>
-                <div className="collection-no">{collection.number}</div>
-                <div className="collection-copy">
-                  <h3>{collection.title}</h3>
-                  <p>{collection.subtitle}</p>
-                </div>
-                <div className={`collection-swatch bg-gradient-to-bl ${collection.accent}`}>
-                  <span className="collection-flower">✦</span>
-                </div>
-                <button
-                  aria-label={`استكشاف ${collection.title}`}
-                  className="round-arrow"
-                  onClick={() => scrollToSection("catalogue")}
-                >
-                  <ArrowUpLeft size={19} strokeWidth={1.5} />
-                </button>
+            {t.collections.map((item) => (
+              <article className="collection-item" key={item.no}>
+                <span className="collection-number">{item.no}</span>
+                <div><h3>{item.title}</h3><p>{item.body}</p></div>
+                <span className="collection-cue"><b>SC</b>{item.cue}</span>
+                <button onClick={() => scrollToSection("catalogue")} aria-label={item.title}><ArrowUpRight size={21} /></button>
               </article>
             ))}
           </div>
         </section>
 
         <section id="personalised" className="personalised-section section-anchor" aria-labelledby="personalised-heading">
-          <div className="personalised-photo">
-            <img src={personalisationImage} alt="تفصيل يدوي لشمعة مخصصة وشريط هدية" />
-            <div className="photo-caption">A little more personal</div>
-          </div>
-          <div className="personalised-content">
-            <div className="eyebrow"><span /> لأجمل التفاصيل</div>
-            <h2 id="personalised-heading">اسمهم.<br />تاريخهم.<br /><em>حكايتهم.</em></h2>
-            <p>
-              للمناسبات التي تستحق شيئاً خاصاً: نترك مساحة لاسم أو ذكرى أو لمسة تجعل الهدية لهم وحدهم.
-            </p>
-            <button className="text-link" onClick={ComingSoonToast}>
-              اطلبي فكرة مخصصة <ArrowUpLeft size={18} />
-            </button>
-            <div className="quiet-rule" />
-            <p className="micro-note">التفاصيل والخيارات النهائية ستظهر هنا بعد اعتماد المنتجات المتاحة.</p>
+          <div className="personalised-image"><img src={personalisationImage} alt="Hand-finished personalised candle and gift ribbon" /><span>02</span></div>
+          <div className="personalised-copy">
+            <p className="eyebrow"><span />{t.personalisedEyebrow}</p>
+            <h2 id="personalised-heading">{t.personalisedTitle}</h2>
+            <p className="section-body">{t.personalisedBody}</p>
+            <button className="underlined-button" onClick={showOrderToast}>{t.personalisedCta}<ArrowUpRight size={17} /></button>
+            <p className="image-side-note">{t.personalisedCaption}</p>
+            <div className="ribbon-mark personal-ribbon" aria-hidden="true" />
           </div>
         </section>
 
         <section id="catalogue" className="catalogue-section section-anchor" aria-labelledby="catalogue-heading">
-          <div className="catalogue-copy">
-            <div className="eyebrow"><span /> قريبا في الكتالوج</div>
-            <h2 id="catalogue-heading">منتجاتك،<br /><em>كما تستحق أن تُرى.</em></h2>
-            <p>
-              هنضيف هنا كل منتج بصورته، اسمه، وصفه، وسعره بالـAED بمجرد ما تبعتي لنا البيانات النهائية.
-            </p>
+          <div className="catalogue-heading">
+            <p className="eyebrow"><span />{t.catalogueEyebrow}</p>
+            <h2 id="catalogue-heading">{t.catalogueTitle}</h2>
+            <p>{t.catalogueBody}</p>
           </div>
-          <div className="catalogue-placeholder" aria-label="مساحة لعرض المنتجات والأسعار عند إضافتها">
-            <div className="placeholder-top"><span>THE SOPHIA EDIT</span><span>ATELIER PREVIEW</span></div>
-            <div className="placeholder-main">
-              <img src={atelierImage} alt="تنسيق شموع فاخرة كنموذج للعرض" />
-              <div className="placeholder-card">
-                <span>من دفتر الأتيليه</span>
-                <strong>تفصيلة من هديتك</strong>
-                <small>الاسم · الوصف · السعر المعتمد</small>
-              </div>
-            </div>
-            <div className="placeholder-base"><i /> <span>تكتمل المجموعة مع اختياراتك النهائية</span></div>
+          <div className="catalogue-preview">
+            <div className="preview-header"><span>{t.catalogueTop}</span><span>SC · 2026</span></div>
+            <div className="preview-image"><img src={atelierImage} alt="Sophia candle styling preview" /><div className="preview-card"><small>{t.catalogueCardLabel}</small><strong>{t.catalogueCardTitle}</strong><p>{t.catalogueCardMeta}</p></div></div>
+            <div className="preview-footer"><i /><span>{t.catalogueFooter}</span></div>
           </div>
         </section>
 
         <section id="occasions" className="occasion-section section-anchor" aria-labelledby="occasion-heading">
-          <div className="occasion-content">
-            <div className="eyebrow light"><span /> مناسبات بتفاصيلها</div>
-            <h2 id="occasion-heading">للضيافة التي<br />يبقى <em>أثرها.</em></h2>
-            <p>مساحة منفصلة لتقديم هدايا الاستقبال، الزفاف، والشركات بنبرة خاصة بها.</p>
-            <button className="button-light" onClick={ComingSoonToast}>
-              احكي لنا عن مناسبتك <ArrowUpLeft size={17} />
-            </button>
+          <div className="occasion-photo"><img src={celebrationImage} alt="Sophia Candles celebration favor arrangement" /></div>
+          <div className="occasion-copy">
+            <p className="eyebrow inverted"><span />{t.occasionEyebrow}</p>
+            <h2 id="occasion-heading">{t.occasionTitle}</h2>
+            <p>{t.occasionBody}</p>
+            <button className="light-button" onClick={showOrderToast}>{t.occasionCta}<ArrowUpRight size={17} /></button>
           </div>
-          <div className="occasion-photo">
-            <img src={celebrationImage} alt="تنسيق راق لهدايا استقبال من الشموع" />
-          </div>
-          <div className="occasion-mark"><Sparkles size={18} /><span>Made for the memory</span></div>
         </section>
 
-        <section className="closing-section" aria-label="التواصل مع Sophia Candles">
-          <div className="closing-mark"><img src={symbolImage} alt="" /></div>
-          <p className="closing-overline">SOPHIA CANDLES · UAE</p>
-          <h2>هديتك الجاية<br /><em>تبدأ من هنا.</em></h2>
-          <button className="button-primary" onClick={ComingSoonToast}>
-            ابدئي طلبك <ArrowUpLeft size={17} />
-          </button>
-          <p className="closing-note">سيتم ربط الطلبات مباشرة بواتساب Sophia Candles بعد تأكيد رقم الاستقبال.</p>
+        <section className="closing-section">
+          <OfficialLogo alt="Sophia Candles official logo" />
+          <p className="closing-eyebrow">{t.closingEyebrow}</p>
+          <h2>{t.closingTitle}</h2>
+          <button className="order-button" onClick={showOrderToast}>{t.closingCta}<ArrowUpRight size={16} /></button>
+          <p className="closing-note">{t.closingNote}</p>
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="footer-brand" dir="ltr">
-          <img src={symbolImage} alt="" />
-          <span>Sophia<br /><small>CANDLES · GIFT ATELIER</small></span>
-        </div>
-        <p>Handmade gifting, with meaning.</p>
-        <p className="footer-year">© 2026 Sophia Candles</p>
+        <OfficialLogo alt="Sophia Candles" />
+        <p>{t.footerLine}</p>
+        <p>{t.footerCopy}</p>
       </footer>
     </div>
   );
