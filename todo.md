@@ -1,5 +1,12 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## User-Authorized Temporary Pricing
+
+- [x] Record AED 200 as user-authorized temporary pricing for currently unpriced products in 12_DATA_GAPS_AND_ASSUMPTIONS.md.
+- [x] Label the AED 200 price as temporary in English and Arabic storefront views.
+- [x] Enable the temporarily priced products to be added to the cart and included in totals.
+- [x] Validate temporary-price cards and cart totals, then save a checkpoint. TypeScript/build passed; the temporary-price product cards and responsive storefront were reviewed on desktop and mobile.
+
 ## Shopify-Ready Checkout Preview
 
 - [x] Add a styled checkout preview with contact, delivery, and order-summary sections.

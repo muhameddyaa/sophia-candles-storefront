@@ -156,6 +156,12 @@ The product photography remains the vivid emotional layer of the storefront; cat
 
 Commerce elements are clear but quieter than the products. Add-to-bag actions are outlined until interaction, offer badges are restrained, and product card composition varies subtly across the carousel and offers grid. Headline weights are kept light and calm, so the site reads as a handmade gift atelier before it reads as a generic retail template.
 
+## Style Decisions — Gift Atelier Closing Pass
+
+Sale wording now speaks in a soft, temporary boutique tone while retaining the confirmed AED price comparison. Category overlays are intentionally lighter, keeping wax, ribbon and flower details central. A printed-tab device, dashed offer stamp, SC seals, soft paper fields and ribbon arcs now recur from the first category card to the footer wordmark, creating a consistent Sophia visual grammar.
+
+The product cards retain an efficient shopping structure but receive varied catalogue details — soft side tabs, distinct crop focus and understated stamped labels — so the two carousels do not read as repeated generic ecommerce cards. Headlines stay contemporary and clear in Gabarito, with an intentionally calmer weight and more personal keepsake language.
+
 ## Style Decisions — Shoppable Atelier Refinement
 
 Each major section now carries a Sophia-specific atelier cue within the monochrome system: soft SC seals, paper-like rules, ribbon arcs, printed offer labels or hand-finished catalogue marks. The category worlds retain their photography but receive distinct white ribbon and rule overlays, making them feel like curated gift paths rather than stock commerce tiles.
