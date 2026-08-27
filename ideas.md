@@ -138,6 +138,20 @@ Five user-supplied flower candle bouquet photos have been added to the **Flower 
 
 The category filters and product cards move away from rigid square boxes. Category controls now use asymmetrical soft radii inspired by petals, tags and folded gift wrapping; product cards follow the same controlled variety, with rounded image corners and circular action marks. The white/black interface remains consistent, while softness comes from silhouette rather than colour.
 
+## Commerce Update — Product, Offer and Cart Experience
+
+The website now removes every non-user-supplied product image. The three category entrances use only real Sophia photography: **Flower Bouquets**, **Favors**, and **Candles**. They are image-led, soft-edge category cards rather than text-only filter boxes.
+
+The homepage follows an unmistakable shopping hierarchy: category discovery, a horizontal **Best Sellers** carousel with four product cards and directional arrows, then a dedicated **Bouquet Offers** section. The sale prices are the numbers explicitly provided by the user: AED 140 instead of AED 180 for bouquets, and AED 100 instead of AED 150 for small bouquets. Discount stamps explain the savings rather than hiding the old price.
+
+The cart is functional in the browser, including add, remove, quantity change, and live AED subtotal. It cannot collect payment yet because Shopify is not connected; the checkout action makes that dependency explicit rather than pretending payment has occurred.
+
+## Style Decisions — Shoppable Atelier Refinement
+
+Each major section now carries a Sophia-specific atelier cue within the monochrome system: soft SC seals, paper-like rules, ribbon arcs, printed offer labels or hand-finished catalogue marks. The category worlds retain their photography but receive distinct white ribbon and rule overlays, making them feel like curated gift paths rather than stock commerce tiles.
+
+The purchasing interface is intentionally quieter than the product photography. Product add-to-bag controls use refined outlined buttons; discount stamps remain clear without becoming louder than the bouquet image; the cart and checkout remain unambiguous. Headline weights were reduced to keep Gabarito’s clarity while replacing generic retail phrases with more tactile, keepsake-led language.
+
 ## Style Decisions — Organic Category Refinement
 
 The three category controls are now distinct **gift worlds**, not generic filters. Each retains its exact name, numbered catalogue cue and tactile value line, then gains an intentionally different paper-tag silhouette: a flower-like seal for Flower Bouquets, a folded favor shape for Favors, and a soft candle form for Candles. Ribbon arcs stay visible in each category, and all controls use varied, organic soft edges rather than square boxes.

@@ -1,5 +1,14 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Shopping, Offers, and Image-Led Categories
+
+- [x] Upload the two newly supplied product photos as durable website assets.
+- [x] Replace existing non-user-supplied catalogue/category photos with only the user-supplied product photography.
+- [x] Add image-led category cards, a four-product best-sellers carousel, and a distinct bouquet-offers section.
+- [x] Show the approved sale rules: AED 140 instead of AED 180 for bouquets; AED 100 instead of AED 150 for small bouquets.
+- [x] Implement cart add/remove/quantity/total behaviour and a checkout handoff that transparently awaits Shopify setup.
+- [x] Validate all browsing, offer, and cart interactions on desktop and mobile, then save a checkpoint. TypeScript/build passed; product categories, best-sellers carousel, offer cards, cart controls, and responsive layouts were checked.
+
 ## Bouquet Addition and Organic Category Navigation
 
 - [x] Upload the five supplied bouquet photos as durable website assets.
