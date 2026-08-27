@@ -146,6 +146,16 @@ The homepage follows an unmistakable shopping hierarchy: category discovery, a h
 
 The cart is functional in the browser, including add, remove, quantity change, and live AED subtotal. It cannot collect payment yet because Shopify is not connected; the checkout action makes that dependency explicit rather than pretending payment has occurred.
 
+## Checkout Preview — Shopify-Ready
+
+The checkout now continues the storefront’s visual language: a calm cart-to-checkout handoff, concise contact and delivery fields, a clear order summary and a payment section styled as a Shopify connection placeholder. The preview **does not save, transmit, or submit any customer information**, and it does not claim a payment is processed. Once Shopify is connected, its checkout will replace this preview for secure payment and customer data handling.
+
+## Style Decisions — Product Colour, Soft Print and Quiet Commerce
+
+The product photography remains the vivid emotional layer of the storefront; category overlays were lightened to preserve the candle detail. Every key section now carries at least one quiet Sophia marker: the SC seal, folded ribbon line, printed divider, paper texture or soft editorial label. These are intentionally dispersed rather than concentrated in one decorative block.
+
+Commerce elements are clear but quieter than the products. Add-to-bag actions are outlined until interaction, offer badges are restrained, and product card composition varies subtly across the carousel and offers grid. Headline weights are kept light and calm, so the site reads as a handmade gift atelier before it reads as a generic retail template.
+
 ## Style Decisions — Shoppable Atelier Refinement
 
 Each major section now carries a Sophia-specific atelier cue within the monochrome system: soft SC seals, paper-like rules, ribbon arcs, printed offer labels or hand-finished catalogue marks. The category worlds retain their photography but receive distinct white ribbon and rule overlays, making them feel like curated gift paths rather than stock commerce tiles.

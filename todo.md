@@ -1,5 +1,12 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Shopify-Ready Checkout Preview
+
+- [x] Add a styled checkout preview with contact, delivery, and order-summary sections.
+- [x] Connect the cart’s checkout button to the preview without collecting, storing, or transmitting customer data.
+- [x] Clearly mark payment as pending Shopify connection while keeping the purchase journey coherent.
+- [x] Validate the checkout preview on desktop and mobile, then save a checkpoint. TypeScript/build passed; cart, checkout preview, category imagery, best-sellers, and offer layouts were checked on desktop and mobile.
+
 ## Shopping, Offers, and Image-Led Categories
 
 - [x] Upload the two newly supplied product photos as durable website assets.
