@@ -95,3 +95,15 @@ This revision removes the logo-derived charcoal system from the website UI itsel
 ## Correction — Natural Photography, Monochrome Interface
 
 The strict black-and-white rule applies to the **website interface only**: page backgrounds, typography, buttons, navigation, labels, lines and UI surfaces use black, white and neutral grey. Product and lifestyle imagery retains its original natural colour without filters, so the products remain authentic and tactile rather than being converted to grayscale.
+
+## Revision — Product-First Boutique Gallery
+
+The supplied reference establishes the desired **commerce hierarchy**, not a template to reproduce. Sophia’s independent solution begins with a compact black-and-white utility/header stack, a centered official wordmark, restrained navigation and an immediate product gallery. The collection is presented as four original editorial tiles rather than a copied grid, with studio-style captions and final-catalogue messaging instead of unverified product names or prices.
+
+The gallery is followed by typographic customization and occasions chapters, rather than the reference’s review carousel. No testimonials, ratings or mock customer reviews are used. The experience remains English-first with a full RTL Arabic toggle, and all visual chrome stays monochrome while product imagery remains natural.
+
+## Correction — Product Card Storefront
+
+The prior product-first version still placed too much emphasis on editorial negative space, making the store read as a brand lookbook rather than a customer-facing product destination. The corrective direction is **Tactile Product Card Commerce**. Product imagery is the opening act, presented in four concrete equal-weight cards that each contain a collection type, a concise value line and a clear exploration action.
+
+The supplied card reference is used solely for its card hierarchy: image above, content below, count, title, description and CTA. Sophia’s version keeps the interface black and white, removes the dark tech imagery and rounded neon treatment, uses the official logo, and uses natural candle photography to make every card feel gift-led and handmade.

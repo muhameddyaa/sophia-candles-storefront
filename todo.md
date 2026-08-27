@@ -1,5 +1,19 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Product-Card Storefront Correction
+
+- [x] Replace the text-heavy opening with a clear, image-led product-card storefront.
+- [x] Translate the supplied card reference into a warm Sophia gallery system without copying its technology aesthetic.
+- [x] Keep the interface black and white, preserve natural product imagery, and retain English/Arabic switching.
+- [x] Validate the recovered desktop/mobile storefront and save a checkpoint. TypeScript/build passed; the restored card-first catalogue was checked on desktop and mobile.
+
+## Product-First Boutique Redesign
+
+- [x] Reframe the supplied reference as an original Sophia Candles product-first storefront, not a direct clone.
+- [x] Curate the existing distinct brand imagery for a concise four-tile gallery; additional image generation hit the daily free-plan limit.
+- [x] Build an English/Arabic catalogue-led landing page with a clean boutique header and contemporary product grid.
+- [ ] Validate the redesigned storefront on desktop and mobile, then save a checkpoint.
+
 ## Monochrome Logo-Colour Refinement
 
 ## Strict Black-and-White Revision
