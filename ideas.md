@@ -87,3 +87,7 @@ The official wordmark is treated as a primary signature, not a small decorative 
 ## Revision — Official Logo Monochrome
 
 The dark ink within the supplied official logo was sampled locally. Its dominant quantized tone is **#303030** and the mean ink colour is **#3D3E3D**. The site therefore uses #3D3E3D as its principal brand ink and #303030 for strong primary surfaces, with white, off-white and neutral greys providing the complete supporting system. Product imagery is shown in monochrome to keep the visual field consistent with the logo rather than reintroducing a competing palette.
+
+## Revision — Strict Black and White
+
+This revision removes the logo-derived charcoal system from the website UI itself. The theme now uses only **pure black (#000000), pure white (#FFFFFF), and neutral greys** for visual hierarchy; no green, beige, gold, or coloured accent remains in the interface. Every product and lifestyle image is explicitly rendered with `grayscale(1)` and `saturate(0)`. The unedited official logo remains the brand asset, while the surrounding website is strictly black and white.
