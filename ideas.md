@@ -83,3 +83,7 @@ The storefront is now reframed as **Modern Keepsake Commerce**: an English-first
 The visual language uses warm white, charcoal ink and restrained sage rather than decorative gold-led luxury. Strong Playfair display typography, clean DM Sans UI text, sharp product framing and graphic number systems make the experience feel current. Arabic keeps the same hierarchy and layout while switching direction and using a more graceful display face. The supplied official logo must remain unaltered; it is cropped only through its surrounding container to remove its built-in white margin.
 
 The official wordmark is treated as a primary signature, not a small decorative device: it is legible in the header, closing sequence and footer. Sophia Sage acts as the repeating visual thread across action buttons, numbered cues, seals and selected italic display words. Repeated ribbon arcs, Atelier Preview tabs and small SC seals connect product moments without making the experience decorative.
+
+## Revision — Official Logo Monochrome
+
+The dark ink within the supplied official logo was sampled locally. Its dominant quantized tone is **#303030** and the mean ink colour is **#3D3E3D**. The site therefore uses #3D3E3D as its principal brand ink and #303030 for strong primary surfaces, with white, off-white and neutral greys providing the complete supporting system. Product imagery is shown in monochrome to keep the visual field consistent with the logo rather than reintroducing a competing palette.
