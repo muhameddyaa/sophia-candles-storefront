@@ -91,3 +91,7 @@ The dark ink within the supplied official logo was sampled locally. Its dominant
 ## Revision — Strict Black and White
 
 This revision removes the logo-derived charcoal system from the website UI itself. The theme now uses only **pure black (#000000), pure white (#FFFFFF), and neutral greys** for visual hierarchy; no green, beige, gold, or coloured accent remains in the interface. Every product and lifestyle image is explicitly rendered with `grayscale(1)` and `saturate(0)`. The unedited official logo remains the brand asset, while the surrounding website is strictly black and white.
+
+## Correction — Natural Photography, Monochrome Interface
+
+The strict black-and-white rule applies to the **website interface only**: page backgrounds, typography, buttons, navigation, labels, lines and UI surfaces use black, white and neutral grey. Product and lifestyle imagery retains its original natural colour without filters, so the products remain authentic and tactile rather than being converted to grayscale.

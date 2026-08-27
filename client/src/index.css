@@ -172,7 +172,7 @@
   .text-button, .underlined-button { color: #000; border-color: #000; }
   .text-button:hover, .underlined-button:hover { color: #555; border-color: #555; }
   .hero-art, .personalised-section, .catalogue-preview { background: #f2f2f2; }
-  .hero-art img, .personalised-image img, .preview-image > img, .occasion-photo img { filter: grayscale(1) saturate(0) contrast(1.04) brightness(1.02); }
+  .hero-art img, .personalised-image img, .preview-image > img, .occasion-photo img { filter: none; }
   .hero-sticker, .preview-card { background: rgb(255 255 255 / .96); border-color: #aaa; box-shadow: 5px 5px 0 rgb(0 0 0 / .12); }
   .hero-sticker span, .section-seal, .collection-cue b { border-color: #999; color: #000; }
   .hero-sticker p { color: #000; }

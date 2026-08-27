@@ -4,6 +4,12 @@
 
 ## Strict Black-and-White Revision
 
+## Natural Product Photography Correction
+
+- [x] Restore the natural colours of every product and lifestyle image.
+- [x] Retain the black-and-white interface, background, button, and typography system.
+- [x] Validate the corrected balance on desktop and mobile, then save a checkpoint. TypeScript/build and desktop/mobile visual checks passed.
+
 - [x] Replace all non-neutral interface colour accents with black, white, and neutral greys only.
 - [x] Confirm every website image is rendered in 100% grayscale with CSS grayscale(1) and saturate(0).
 - [x] Validate the strict monochrome design on desktop and mobile, then save a checkpoint. TypeScript/build and desktop/mobile grayscale visual checks passed.
