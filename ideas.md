@@ -107,3 +107,13 @@ The gallery is followed by typographic customization and occasions chapters, rat
 The prior product-first version still placed too much emphasis on editorial negative space, making the store read as a brand lookbook rather than a customer-facing product destination. The corrective direction is **Tactile Product Card Commerce**. Product imagery is the opening act, presented in four concrete equal-weight cards that each contain a collection type, a concise value line and a clear exploration action.
 
 The supplied card reference is used solely for its card hierarchy: image above, content below, count, title, description and CTA. Sophia’s version keeps the interface black and white, removes the dark tech imagery and rounded neon treatment, uses the official logo, and uses natural candle photography to make every card feel gift-led and handmade.
+
+## Catalogue Update — Teddy Bloom
+
+Two supplied Sophia product concepts now lead the catalogue: **Teddy Bloom Gift Candle**, presented in its clear gift box, and **Teddy Bloom Bowl Candle**, presented as a sculptural wax scene. Their original natural-colour photography is used as supplied. No price, delivery promise, material specification or customisation claim is shown until the product catalogue is confirmed.
+
+## Style Decisions
+
+The first viewport is now product-led in practice: the two actual Teddy Bloom product cards have visual priority and the introductory headline is deliberately smaller and shorter. The previous generic collection placeholders have been removed rather than presented as products.
+
+The monochrome interface remains strict but gets warmth through neutral paper texture, fine printed-catalogue rules, short atelier captions and the recurring official wordmark/SC seal. The black occasions chapter remains a special punctuation surface only; its former concentric target geometry has been replaced by asymmetrical ribbon arcs to make the motif feel gift-led rather than technical.

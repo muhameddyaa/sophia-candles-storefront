@@ -1,5 +1,12 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Teddy Bloom Product Addition
+
+- [x] Register and upload the supplied Teddy Bloom product photos as website assets.
+- [x] Add Teddy Bloom Gift Candle and Teddy Bloom Bowl Candle to the English and Arabic product grids.
+- [x] Keep pricing absent until the user confirms AED prices.
+- [x] Validate the product additions on desktop and mobile, then save a checkpoint. TypeScript/build passed, and the two product cards were reviewed on desktop and mobile.
+
 ## Product-Card Storefront Correction
 
 - [x] Replace the text-heavy opening with a clear, image-led product-card storefront.

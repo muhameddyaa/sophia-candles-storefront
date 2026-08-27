@@ -9,6 +9,8 @@ import { toast } from "sonner";
 
 const officialLogo = "/manus-storage/sophia-official-logo_aa513219.png";
 const products = {
+  teddyGift: "/manus-storage/teddy-bloom-gift-candle_0514c0a4.png",
+  teddyBowl: "/manus-storage/teddy-bloom-bowl-candle_282e78aa.png",
   bouquet: "/manus-storage/sophia-hero-bouquet_557ec05c.jpg",
   sculptural: "/manus-storage/sophia-atelier-still-life_b579ade2.jpg",
   personal: "/manus-storage/sophia-personalisation_56f1a835.jpg",
@@ -29,19 +31,17 @@ const copy = {
       { label: "Events & favors", target: "occasions" },
     ],
     search: "Search", bag: "Bag", menu: "Open menu", close: "Close menu",
-    introKicker: "THE SOPHIA COLLECTION",
-    introTitle: "Gifts made to be remembered.",
-    introBody: "Handmade candle bouquets and considered gifting pieces for the moments that call for more than the usual.",
-    introSide: "A thoughtful gift begins with the way it is made.",
-    viewAll: "Browse the collection",
+    introKicker: "THE TEDDY BLOOM EDIT",
+    introTitle: "Two gifts. A little world of their own.",
+    introBody: "Meet Teddy Bloom — handmade candle scenes designed to turn one thoughtful moment into a keepsake.",
+    introSide: "A small handmade gift, presented with care.",
+    viewAll: "Meet Teddy Bloom",
     cardAction: "Explore",
     cards: [
-      { no: "01", title: "Candle bouquets", description: "Flowers in form. A keepsake in spirit.", image: products.bouquet },
-      { no: "02", title: "Sculptural candles", description: "Small handmade pieces for a beautiful pause.", image: products.sculptural },
-      { no: "03", title: "Personalised gifting", description: "Names, dates and finishing touches made for them.", image: products.personal },
-      { no: "04", title: "Wedding & event favors", description: "Little welcome gestures your guests take with them.", image: products.favors },
+      { no: "01", label: "NEW PRODUCT", title: "Teddy Bloom Gift Candle", description: "A handmade keepsake presented in a clear gift box.", image: products.teddyGift },
+      { no: "02", label: "NEW PRODUCT", title: "Teddy Bloom Bowl Candle", description: "A soft, sculptural candle scene made for gifting.", image: products.teddyBowl },
     ],
-    catalogueNote: "Product names, photos and AED prices will appear here once your final catalogue is confirmed.",
+    catalogueNote: "The first two Teddy Bloom pieces are here. Final product details and AED prices will follow your catalogue confirmation.",
     customKicker: "FOR THE DETAIL THAT MAKES IT THEIRS",
     customTitle: "A name. A date. A little more meaning.",
     customBody: "Build a gift around the person receiving it, from the message to the finishing detail.",
@@ -72,19 +72,17 @@ const copy = {
       { label: "مناسبات وضيافة", target: "occasions" },
     ],
     search: "بحث", bag: "الحقيبة", menu: "فتح القائمة", close: "إغلاق القائمة",
-    introKicker: "مجموعة SOPHIA",
-    introTitle: "هدايا مصنوعة لتُتذكر.",
-    introBody: "بوكيهات شموع وهدايا مصنوعة يدوياً للحظات التي تستحق أكثر من الهدية المعتادة.",
-    introSide: "الهدية المدروسة تبدأ من طريقة صنعها.",
-    viewAll: "شاهدي المجموعة",
+    introKicker: "تشكيلة TEDDY BLOOM",
+    introTitle: "هديتان. وعالم صغير خاص بهما.",
+    introBody: "تعرفي على Teddy Bloom — مشاهد شموع مصنوعة يدوياً لتحول لحظة مدروسة إلى ذكرى تبقى.",
+    introSide: "هدية صغيرة مصنوعة يدوياً، مقدمة بعناية.",
+    viewAll: "تعرفي على Teddy Bloom",
     cardAction: "اكتشفي",
     cards: [
-      { no: "01", title: "بوكيهات الشموع", description: "شكل ورد، وإحساس يبقى.", image: products.bouquet },
-      { no: "02", title: "شموع فنية", description: "قطع يدوية صغيرة للحظات حلوة.", image: products.sculptural },
-      { no: "03", title: "هدايا مخصصة", description: "أسماء وتواريخ ولمسات خاصة بهم.", image: products.personal },
-      { no: "04", title: "هدايا زفاف ومناسبات", description: "ترحيب صغير يخرج مع ضيوفك.", image: products.favors },
+      { no: "01", label: "منتج جديد", title: "شمعة Teddy Bloom في علبة هدايا", description: "قطعة يدوية مميزة داخل علبة هدايا شفافة.", image: products.teddyGift },
+      { no: "02", label: "منتج جديد", title: "شمعة Teddy Bloom في وعاء", description: "مشهد شموع ناعم وفني، جاهز كهدية.", image: products.teddyBowl },
     ],
-    catalogueNote: "هتظهر أسماء المنتجات وصورها وأسعارها بالـAED هنا بعد اعتماد الكتالوج النهائي.",
+    catalogueNote: "أول قطعتين من Teddy Bloom موجودين الآن. تفاصيل المنتجات النهائية وأسعار الـAED هتضاف بعد اعتماد الكتالوج.",
     customKicker: "للتفصيلة اللي تخليها تخصهم",
     customTitle: "اسم. تاريخ. ومعنى أكثر.",
     customBody: "نصنع الهدية حول الشخص الذي سيستلمها، من الرسالة وحتى اللمسة الأخيرة.",
@@ -130,7 +128,7 @@ export default function Home() {
       <main id="top">
         <section className="store-intro" aria-labelledby="collection-heading"><div><p>{t.introKicker}</p><h1 id="collection-heading">{t.introTitle}</h1><span>{t.introBody}</span></div><aside><b>SC</b><p>{t.introSide}</p><button onClick={() => goTo("collection")}>{t.viewAll}<ArrowUpRight size={15} /></button></aside></section>
 
-        <section id="collection" className="catalogue-grid section-anchor" aria-label="Sophia product collection">{t.cards.map((card) => <article className="collection-card" key={card.no}><button className="collection-image" onClick={unavailable} aria-label={card.title}><img src={card.image} alt={card.title} /><span>{card.no}</span><i><ArrowUpRight size={17} /></i></button><div className="collection-info"><div><p>{card.no} · SOPHIA CANDLES</p><h2>{card.title}</h2><span>{card.description}</span></div><button onClick={unavailable}>{t.cardAction}<ArrowUpRight size={14} /></button></div></article>)}</section>
+        <section id="collection" className="catalogue-grid section-anchor" aria-label="Sophia product collection"><div className="featured-strip"><span>01 — TEDDY BLOOM</span><p>{t.introSide}</p></div>{t.cards.map((card) => <article className="collection-card" key={card.no}><button className="collection-image" onClick={unavailable} aria-label={card.title}><img src={card.image} alt={card.title} /><span>{card.no}</span><i><ArrowUpRight size={17} /></i></button><div className="collection-info"><div><p>{card.no} · {card.label}</p><h2>{card.title}</h2><span>{card.description}</span></div><button onClick={unavailable}>{t.cardAction}<ArrowUpRight size={14} /></button></div></article>)}</section>
         <p className="catalogue-note">{t.catalogueNote}</p>
 
         <section id="custom" className="detail-section custom-section section-anchor"><div className="detail-index"><span>01</span><i /></div><div className="detail-content"><p>{t.customKicker}</p><h2>{t.customTitle}</h2><span>{t.customBody}</span><button onClick={unavailable}>{t.customAction}<ArrowUpRight size={16} /></button></div><div className="monogram" aria-hidden="true"><b>S</b><i /><b>C</b></div></section>
