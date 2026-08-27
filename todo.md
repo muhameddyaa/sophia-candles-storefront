@@ -1,5 +1,12 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Bouquet Addition and Organic Category Navigation
+
+- [x] Upload the five supplied bouquet photos as durable website assets.
+- [x] Add the new supplied bouquet product photos to the Flower Bouquets catalogue filter without inventing prices.
+- [x] Replace the rectangular category boxes with soft, organic, flower-inspired category controls.
+- [x] Validate the updated catalogue and category controls on desktop and mobile, then save a checkpoint. TypeScript/build passed, and the five bouquet cards plus organic category controls were reviewed on desktop and mobile.
+
 ## Category-First Homepage Rebuild
 
 - [x] Add the three requested product categories above the homepage catalogue: باقات ورود، توزيعات، شموع.

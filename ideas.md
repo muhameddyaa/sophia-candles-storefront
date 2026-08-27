@@ -129,3 +129,17 @@ The default view carries six product cards, including the two real Teddy Bloom p
 The category entries are now treated as three miniature gifting worlds rather than generic filter boxes. Each has an exact category name, a short tactile value line, a numbered catalogue cue and a small ribbon arc — with the required order unchanged: Flower Bouquets, Favors, Candles.
 
 Gabarito remains the font system, but the heaviest display treatments have been reduced to calmer 600 weights. The black-and-white storefront receives warmth through off-white paper fields, fine catalogue rules, SC seals and asymmetric ribbon lines. Product photos remain the expressive colour layer, while interface colour remains strictly monochrome.
+
+## Catalogue Update — Flower Candle Bouquets
+
+Five user-supplied flower candle bouquet photos have been added to the **Flower Bouquets** category, bringing the default storefront gallery to eleven product cards. The visible product names are descriptive working labels only and can be replaced with the brand’s official product names; **no price or unconfirmed specification is displayed**.
+
+## Style Decision — Soft Organic Edges
+
+The category filters and product cards move away from rigid square boxes. Category controls now use asymmetrical soft radii inspired by petals, tags and folded gift wrapping; product cards follow the same controlled variety, with rounded image corners and circular action marks. The white/black interface remains consistent, while softness comes from silhouette rather than colour.
+
+## Style Decisions — Organic Category Refinement
+
+The three category controls are now distinct **gift worlds**, not generic filters. Each retains its exact name, numbered catalogue cue and tactile value line, then gains an intentionally different paper-tag silhouette: a flower-like seal for Flower Bouquets, a folded favor shape for Favors, and a soft candle form for Candles. Ribbon arcs stay visible in each category, and all controls use varied, organic soft edges rather than square boxes.
+
+The typography remains Gabarito and Noto Kufi Arabic for clear reading, but primary headings now use calmer medium weights. Fine paper grain, compact rules, small SC seals and gift-ribbon details bring warmth to the black-and-white interface without competing with the product photography.

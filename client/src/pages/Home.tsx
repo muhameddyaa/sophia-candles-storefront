@@ -15,6 +15,11 @@ const imagery = {
   studio: "/manus-storage/sophia-atelier-still-life_b579ade2.jpg",
   personal: "/manus-storage/sophia-personalisation_56f1a835.jpg",
   favors: "/manus-storage/sophia-celebration-table_3ed841c9.jpg",
+  bouquetHeartNote: "/manus-storage/sophia-bouquet-heart-note_2e960724.webp",
+  bouquetLilacWrap: "/manus-storage/sophia-bouquet-lilac-wrap_9887cd09.webp",
+  bouquetRoseBox: "/manus-storage/sophia-bouquet-rose-box_52af8995.webp",
+  bouquetPinkBox: "/manus-storage/sophia-bouquet-pink-box_1dcc4066.webp",
+  bouquetLilacCloseup: "/manus-storage/sophia-bouquet-lilac-closeup_120909be.webp",
 };
 
 type Language = "en" | "ar";
@@ -28,6 +33,11 @@ const products = {
     { id: "bloom-piece", category: "candles" as Category, tag: "CANDLE", title: "Bloom Sculptural Candle", subtitle: "Made by hand for a beautiful small moment.", image: imagery.personal },
     { id: "petite-favors", category: "favors" as Category, tag: "FAVORS", title: "Petite Celebration Favors", subtitle: "Small handmade gestures for your table.", image: imagery.favors },
     { id: "atelier-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Atelier Flower Candle", subtitle: "A delicate wax bloom for gifting and keeping.", image: imagery.studio },
+    { id: "rose-note-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Rose Note Candle Bouquet", subtitle: "A pink rose candle bouquet with a card for your message.", image: imagery.bouquetHeartNote },
+    { id: "pastel-wrap-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Pastel Wrap Candle Bouquet", subtitle: "A soft, colourful candle bouquet finished with a ribbon wrap.", image: imagery.bouquetLilacWrap },
+    { id: "rose-box-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Rose Box Candle Bouquet", subtitle: "A full pink bloom presented in a keepsake box.", image: imagery.bouquetRoseBox },
+    { id: "pink-bloom-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Pink Bloom Candle Bouquet", subtitle: "A rose candle arrangement with soft floral details.", image: imagery.bouquetPinkBox },
+    { id: "lilac-bloom-bouquet", category: "bouquets" as Category, tag: "FLOWER BOUQUET", title: "Lilac Bloom Candle Bouquet", subtitle: "A close-up arrangement of pastel candle flowers.", image: imagery.bouquetLilacCloseup },
   ],
   ar: [
     { id: "teddy-gift", category: "candles" as Category, tag: "جديد", title: "شمعة Teddy Bloom في علبة هدايا", subtitle: "قطعة مميزة داخل علبة هدايا شفافة.", image: imagery.teddyGift },
@@ -36,6 +46,11 @@ const products = {
     { id: "bloom-piece", category: "candles" as Category, tag: "شموع", title: "شمعة Bloom الفنية", subtitle: "مصنوعة يدوياً للحظات الصغيرة الحلوة.", image: imagery.personal },
     { id: "petite-favors", category: "favors" as Category, tag: "توزيعات", title: "توزيعات احتفال صغيرة", subtitle: "لفتات يدوية صغيرة لسفرتك ومناسبتك.", image: imagery.favors },
     { id: "atelier-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "شمعة ورد من الأتيليه", subtitle: "وردة شمعية رقيقة للهدية والذكرى.", image: imagery.studio },
+    { id: "rose-note-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "باقة شموع ورد مع بطاقة", subtitle: "باقة ورد شموع وردية مع بطاقة لرسالتك.", image: imagery.bouquetHeartNote },
+    { id: "pastel-wrap-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "باقة شموع ورد باستيل", subtitle: "باقة شموع ورد ملونة بتغليف وشريط رقيق.", image: imagery.bouquetLilacWrap },
+    { id: "rose-box-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "باقة شموع ورد في علبة", subtitle: "ورد شمعي وردي كامل مقدم في علبة مميزة.", image: imagery.bouquetRoseBox },
+    { id: "pink-bloom-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "باقة شموع ورد وردية", subtitle: "تنسيق ورد شمعي وردي بتفاصيل ناعمة.", image: imagery.bouquetPinkBox },
+    { id: "lilac-bloom-bouquet", category: "bouquets" as Category, tag: "باقات ورود", title: "باقة شموع ورد ليلكي", subtitle: "تنسيق قريب من ورود الشموع الباستيل.", image: imagery.bouquetLilacCloseup },
   ],
 };
 
@@ -93,7 +108,7 @@ export default function Home() {
 
       <main id="top">
         <section className="catalogue-hero"><div><p>{t.collection}</p><h1>{t.heading}</h1><span>{t.body}</span></div><div className="hero-stamp"><b>SC</b><p>HANDMADE<br />IN UAE</p></div></section>
-        <section className="category-section" aria-labelledby="category-heading"><div className="section-label"><span>01</span><i /><p id="category-heading">{t.browse}</p><b>SC</b></div><div className="category-tabs">{t.categories.map((category, index) => <button key={category.id} className={activeCategory === category.id ? "selected" : ""} onClick={() => setCategory(category.id)}><span className="category-number">0{index + 1}</span><span className="category-copy"><strong>{category.label}</strong><small>{category.detail}</small></span><span className="ribbon-arc" aria-hidden="true" /><ArrowUpRight size={18} /></button>)}</div></section>
+        <section className="category-section" aria-labelledby="category-heading"><div className="section-label"><span>01</span><i /><p id="category-heading">{t.browse}</p><b>SC</b></div><div className="category-tabs">{t.categories.map((category, index) => <button key={category.id} data-category={category.id} className={activeCategory === category.id ? "selected" : ""} onClick={() => setCategory(category.id)}><span className="category-number">0{index + 1}</span><span className="category-copy"><strong>{category.label}</strong><small>{category.detail}</small></span><span className="ribbon-arc" aria-hidden="true" /><ArrowUpRight size={18} /></button>)}</div></section>
         <section id="products" className="products-section"><div className="products-heading"><div><p><b>SC</b>{activeCategory === "all" ? t.all : t.categories.find((category) => category.id === activeCategory)?.label}</p><h2>{visibleProducts.length} {t.cards}</h2></div>{activeCategory !== "all" && <button onClick={() => setCategory("all")}>{t.showAll}<ArrowUpRight size={15} /></button>}</div><div className="product-grid">{visibleProducts.map((product) => <article className="product-card" key={product.id}><button className="card-image" onClick={productToast} aria-label={product.title}><img src={product.image} alt={product.title} /><span>{product.tag}</span><i><ArrowUpRight size={18} /></i></button><div className="card-details"><div><p>{product.tag}</p><h3>{product.title}</h3><span>{product.subtitle}</span></div><button onClick={productToast}>{t.explore}<ArrowUpRight size={14} /></button></div></article>)}</div><p className="catalogue-note">{t.catalogueNote}</p></section>
         <section className="custom-banner"><div className="custom-mark" aria-hidden="true"><span>S</span><i /><span>C</span></div><div><p>MADE FOR YOUR MOMENT</p><h2>{t.lowerTitle}</h2><span>{t.lowerBody}</span><button onClick={productToast}>{t.lowerCta}<ArrowUpRight size={16} /></button></div></section>
         <section className="studio-section"><div className="studio-mark">SC</div><p>FROM SOPHIA</p><h2>{t.studioTitle}</h2><span>{t.studioText}</span><a href="https://www.instagram.com/sophiacandles.ae/" target="_blank" rel="noreferrer">{t.studioCta}<Instagram size={15} /></a></section>
