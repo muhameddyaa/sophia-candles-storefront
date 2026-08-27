@@ -117,3 +117,15 @@ Two supplied Sophia product concepts now lead the catalogue: **Teddy Bloom Gift 
 The first viewport is now product-led in practice: the two actual Teddy Bloom product cards have visual priority and the introductory headline is deliberately smaller and shorter. The previous generic collection placeholders have been removed rather than presented as products.
 
 The monochrome interface remains strict but gets warmth through neutral paper texture, fine printed-catalogue rules, short atelier captions and the recurring official wordmark/SC seal. The black occasions chapter remains a special punctuation surface only; its former concentric target geometry has been replaced by asymmetrical ribbon arcs to make the motif feel gift-led rather than technical.
+
+## Revision — Category-First Home
+
+The homepage now behaves like a real storefront rather than a one-product feature. The first journey is **three requested categories in this exact order: Flower Bouquets, Favors, Candles** — translated fully in the Arabic interface as باقات ورود، توزيعات، شموع. They appear above the product gallery as decisive, large, filterable entrances.
+
+The default view carries six product cards, including the two real Teddy Bloom product concepts, so the homepage feels abundant even while the final catalogue is being completed. The type system has moved from a fashion-editorial serif-led style to **Gabarito**, a clearer, friendly contemporary display and UI font, paired with Noto Kufi Arabic for legibility and RTL support. Product headings and descriptions are intentionally larger, darker, and shorter.
+
+## Style Decisions — Category Warmth Pass
+
+The category entries are now treated as three miniature gifting worlds rather than generic filter boxes. Each has an exact category name, a short tactile value line, a numbered catalogue cue and a small ribbon arc — with the required order unchanged: Flower Bouquets, Favors, Candles.
+
+Gabarito remains the font system, but the heaviest display treatments have been reduced to calmer 600 weights. The black-and-white storefront receives warmth through off-white paper fields, fine catalogue rules, SC seals and asymmetric ribbon lines. Product photos remain the expressive colour layer, while interface colour remains strictly monochrome.

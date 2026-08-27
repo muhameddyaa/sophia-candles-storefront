@@ -1,5 +1,12 @@
 # Sophia Candles — Modern Bilingual Revision
 
+## Category-First Homepage Rebuild
+
+- [x] Add the three requested product categories above the homepage catalogue: باقات ورود، توزيعات، شموع.
+- [x] Rework the homepage as a large product grid with many product cards rather than a two-product feature.
+- [x] Replace the current display typography with a clearer, more legible premium type system.
+- [x] Preserve the black-and-white interface and natural product photography, then validate on desktop and mobile. TypeScript/build passed; the category-first layout was reviewed on desktop and mobile.
+
 ## Teddy Bloom Product Addition
 
 - [x] Register and upload the supplied Teddy Bloom product photos as website assets.
